@@ -148,9 +148,9 @@ body {
   height: 16px;
   width: 16px;
 }
-.icon-envelope::before {
+/* .icon-envelope::before {
   background-image: url(../images/envelope-2.svg);
-}
+} */
 .icon-smartphone::before {
   background-image: url(../images/smartphone-2.svg);
 }
@@ -409,6 +409,12 @@ body {
   box-sizing: border-box;
   flex-basis: calc((100% - 90px) / 3);
 }
+.ct-link:hover {
+  box-shadow: 
+  0px 1px 1px rgba(0, 0, 0, 0.12), 
+  0px 4px 4px rgba(0, 0, 0, 0.06), 
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .category-card {
   display: block;
   text-align: start;
@@ -466,6 +472,13 @@ body {
 .btn-item:last-child {
   margin-right: 0;
 }
+.button-list .ct:hover,
+.button-list .ct:focus {
+  box-shadow: 
+  0px 3px 1px rgba(0, 0, 0, 0.1), 
+  0px 1px 2px rgba(0, 0, 0, 0.08), 
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
 /* Clients */
 .clients-list {
@@ -515,9 +528,36 @@ body {
   background-color: var(--hero-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  
 }
+/* Общий блок */
+.page-footer .pf-cont {
+  display: flex;
+  align-content: center;
+  flex-direction: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 231px;
+  margin-left: 0;
+  margin-right: 70px;
+  padding: 0;
+}
+/* Контейнер для адреса */
+.container.ftr-container {
+  display: flex;
+  align-content: center;
+  flex-direction: flex-start;
 
+}
+/* Контейнер для ссылок */
+.container.site-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 206px;
+  margin: 0;
+  padding: 0;
+}
 /* logo-footer */
 .logo-ftr {
   font-family: "Raleway";
@@ -527,13 +567,14 @@ body {
   color: var(--accent-color);
   margin-bottom: 20px;
 }
-
 .logo-ftr.studio {
   color: var(--second-text-color);
 }
+/* Адрес */
 .address {
   font-size: 14px;
   line-height: 1.71;
+  /* width: 231px; */
 }
 .address .address-link {
   color: var(--second-text-color);
@@ -564,11 +605,7 @@ body {
 .address-link:focus {
   color: var(--accent-color);
 }
-.container.ftr-container {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-}
+
 .ftr-title {
   color: var(--second-text-color);
   font-weight: 700;
@@ -577,6 +614,12 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.ftr-site-list {
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
 /* list-type */
 .list,
 .features,
