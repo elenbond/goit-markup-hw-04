@@ -130,33 +130,45 @@ body {
   color: var(--accent-color);
 }
 .cont-link {
-  display: block;
+  display: flex;
   align-items: flex-end;
   margin-right: 50px;
-  
 }
 .cont-link:last-child {
   margin-right: 0;
 }
-.cont-link .link::before {
+.icon-envelope,
+.icon-smartphone {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+}
+.icon-envelope:hover,
+.icon-envelope:focus {
+  fill: var(--accent-color);
+}
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  fill: var(--accent-color);
+}
+/* .cont-link .link::before {
   display: inline-flex;
   content: '';
   background-repeat: no-repeat;
   background-position: top;
-  /* background-size: auto; */
+  background-size: auto;
   margin-right: 10px;
   height: 16px;
   width: 16px;
-}
+} */
 /* .icon-envelope::before {
   background-image: url(../images/envelope-2.svg);
 } */
 .icon-smartphone::before {
   background-image: url(../images/smartphone-2.svg);
 }
-.icon-envelope:before:hover{
+/* .icon-envelope:before:hover{
   fill: var(--accent-color);
-}
+} */
 .hdr-nav {
   display: flex;
   align-items: center;
@@ -244,7 +256,23 @@ body {
 .features-list:last-child {
   margin-right: 0;
 }
-.features-list::before {
+.icon {
+  height: 120px;
+  width: 270px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  fill: #212121;
+}
+.icon-antenna {
+  border: 1px solid #000000;
+}
+.icon:hover, .icon:focus {
+  background-color: var(--accent-color);
+  fill: var(--second-text-color);
+}
+/* .features-list::before {
   display: block;
   content: '';
   height: 120px;
@@ -255,14 +283,8 @@ body {
   margin-bottom: 30px;
   box-sizing: border-box;
   border-radius: 4px;
-}
-.features-list:first-child::before {
-  border: 1px solid #000000;
-}
-.icon-antenna::before {
-  background-image: url(../images/antenna\ 1.svg);
-}
-.icon-clock::before {
+} */
+/* .icon-clock::before {
   background-image: url(../images/clock\ 1-2.svg);
 }
 .icon-diagram::before {
@@ -270,7 +292,7 @@ body {
 }
 .icon-astronaut::before {
   background-image: url(../images/astronaut\ 1-2.svg);
-}
+} */
 
 .section-title.hidden {
   position: absolute;
