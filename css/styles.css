@@ -182,8 +182,12 @@ body {
 .hero {
   color: var(--second-text-color);
   background-color: var(--hero-background-color);
-  background-image: url(../images/hero-p.jpg);
-  background-image: linear-gradient(to right, gba(47, 48, 58, 0.4));
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/hero-p.jpg);
+  /* background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
