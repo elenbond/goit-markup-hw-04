@@ -73,10 +73,10 @@ body {
   border-bottom: 1px solid #ececec;
 }
 /* Site navigation */
-.site-nav .link.current {
+.hdr-nav-link.current {
   color: var(--accent-color);
 }
-.site-nav .link {
+.hdr-nav-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -86,8 +86,8 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.site-nav .link:hover,
-.site-nav .link:focus,
+.hdr-nav-link:hover,
+.hdr-nav-link:focus,
 .logo:focus {
   color: var(--accent-color);
 }
@@ -118,16 +118,16 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-.contacts-header .link {
+.hdr-ct-link {
   color: var(--primary-text-color);
   text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
   display: flex;
-  align-content: center;
+  align-items: center;
 }
-.contacts-header .link:hover,
-.contacts-header .link:focus {
+.hdr-ct-link:hover,
+.hdr-ct-link:focus {
   color: var(--accent-color);
 }
 .cont-link {
@@ -143,12 +143,6 @@ body {
   fill: currentColor;
   margin-right: 10px;
 }
-/* .icon-envelope:hover,
-.icon-envelope:focus,
-.icon-smartphone:hover,
-.icon-smartphone:focus  {
-  fill: var(--accent-color);
-} */
 /* .cont-link .link::before {
   display: inline-flex;
   content: '';
@@ -158,14 +152,14 @@ body {
   margin-right: 10px;
   height: 16px;
   width: 16px;
-} */
-/* .icon-envelope::before {
+} 
+ .icon-envelope::before {
   background-image: url(../images/envelope-2.svg);
-} */
-.icon-smartphone::before {
+} 
+ .icon-smartphone::before {
   background-image: url(../images/smartphone-2.svg);
-}
-/* .icon-envelope:before:hover{
+} 
+ .icon-envelope:before:hover{
   fill: var(--accent-color);
 } */
 .hdr-nav {
@@ -234,8 +228,8 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .features .paragraphe {
   font-size: 14px;
@@ -246,7 +240,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .features-list {
   display: flex;
   flex-direction: column;
@@ -254,9 +247,6 @@ body {
   align-content: flex-start;
   margin-right: 30px;
   width: 270px;
-}
-.features-list .paragraphe {
-  margin-top: 10px;
 }
 .features-list:last-child {
   margin-right: 0;
@@ -310,11 +300,6 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* .container.adv-container {
-  justify-content: space-around;
-  margin-right: 0;
-  margin-left: 0;
-} */
 /* -------------------------------------------- */
 /* Photos */
 .photos {
@@ -472,11 +457,11 @@ body {
   background-color: var(--accent-color);
   color: var(--second-text-color);
 }
-.button.secondary {
+.btn-portfolio {
   background-color: var(--second-background-color);
   color: var(--title-text-color);
 }
-.button.primary.hr {
+.active-btn.hr {
   display: block;
   padding: 10px 32px;
   margin: auto;
@@ -508,6 +493,10 @@ body {
   0px 1px 2px rgba(0, 0, 0, 0.08), 
   0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.hr:hover,
+.hr:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 
 /* Clients */
 .clients-list {
@@ -523,26 +512,16 @@ body {
   margin-right: 0;
 }
 .clients-list .client {
-  display: block;
-  color: var(--icon-sites-color);
-  /* box-sizing: border-box; */
-  /* border: 1px solid #AFB1B8; */
-}
-.thumb-client {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
+  color: var(--icon-sites-color);
   border: 1px solid #AFB1B8;
 }
-/* .clients-list .client:hover,
+.clients-list .client:hover,
 .clients-list .client:focus {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-} */
-.clients-list .thumb-client:hover,
-.clients-list .thumb-client:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -550,7 +529,7 @@ body {
   fill: currentColor;
 }
 
-/* Footer */
+/* ----------------------Footer------------------------- */
 .page-footer {
   background-color: var(--hero-background-color);
   padding-top: 60px;
@@ -604,6 +583,7 @@ body {
   /* width: 231px; */
 }
 .address .address-link {
+  display: block;
   color: var(--second-text-color);
   font-style: normal;
   text-decoration: none;
@@ -620,13 +600,13 @@ body {
   display: flex;
   justify-content: center;
 } */
-.contacts-footer .link {
+.ct-ftr-link {
   color: var(--ftr-contacts-color);
   font-style: normal;
   text-decoration: none;
 }
-.contacts-footer .link:hover,
-.contacts-footer .link:focus,
+.ct-ftr-link:hover,
+.ct-ftr-link:focus,
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
